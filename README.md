@@ -83,6 +83,8 @@ Agent 1 (mcp-metadata): metadata_read("song.flac") -> ISRC: USHM82148308
 Agent 2 (mcp-verifiedhumancert): vhc_verify_isrc("USHM82148308") -> certified: true
 ```
 
+![Multi-agent workflow: mcp-metadata reads ISRC, mcp-verifiedhumancert verifies certification](docs/multi-agent-workflow.webp)
+
 Two MCP servers, two agents, one orchestrator (Claude). See the [blog post](https://musictechlab.io/blog/software-development/mcp-verified-human-cert-open-source) for the full story.
 
 ## Development
