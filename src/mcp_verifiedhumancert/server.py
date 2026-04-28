@@ -30,7 +30,9 @@ def vhc_verify_isrc(isrc: str) -> str:
         result = client.verify_by_isrc(isrc)
         return json.dumps(result, indent=2, ensure_ascii=False)
     except httpx.HTTPStatusError as e:
-        return json.dumps({"error": f"HTTP {e.response.status_code}", "detail": e.response.text})
+        return json.dumps(
+            {"error": f"HTTP {e.response.status_code}", "detail": e.response.text}
+        )
     except httpx.ConnectError as e:
         return json.dumps({"error": "Connection failed", "detail": str(e)})
 
@@ -47,7 +49,9 @@ def vhc_verify_track(artist: str, track: str) -> str:
         result = client.status_by_artist_track(artist, track)
         return json.dumps(result, indent=2, ensure_ascii=False)
     except httpx.HTTPStatusError as e:
-        return json.dumps({"error": f"HTTP {e.response.status_code}", "detail": e.response.text})
+        return json.dumps(
+            {"error": f"HTTP {e.response.status_code}", "detail": e.response.text}
+        )
     except httpx.ConnectError as e:
         return json.dumps({"error": "Connection failed", "detail": str(e)})
 
@@ -63,7 +67,9 @@ def vhc_verify_cert(cert_number: str) -> str:
         result = client.verify_by_cert_number(cert_number)
         return json.dumps(result, indent=2, ensure_ascii=False)
     except httpx.HTTPStatusError as e:
-        return json.dumps({"error": f"HTTP {e.response.status_code}", "detail": e.response.text})
+        return json.dumps(
+            {"error": f"HTTP {e.response.status_code}", "detail": e.response.text}
+        )
     except httpx.ConnectError as e:
         return json.dumps({"error": "Connection failed", "detail": str(e)})
 
@@ -78,7 +84,9 @@ def vhc_registry() -> str:
         result = client.get_recent_registry()
         return json.dumps(result, indent=2, ensure_ascii=False)
     except httpx.HTTPStatusError as e:
-        return json.dumps({"error": f"HTTP {e.response.status_code}", "detail": e.response.text})
+        return json.dumps(
+            {"error": f"HTTP {e.response.status_code}", "detail": e.response.text}
+        )
     except httpx.ConnectError as e:
         return json.dumps({"error": "Connection failed", "detail": str(e)})
 
@@ -95,7 +103,9 @@ def vhc_stats() -> str:
         result = {"registry": registry_stats, "certifications": cert_stats}
         return json.dumps(result, indent=2, ensure_ascii=False)
     except httpx.HTTPStatusError as e:
-        return json.dumps({"error": f"HTTP {e.response.status_code}", "detail": e.response.text})
+        return json.dumps(
+            {"error": f"HTTP {e.response.status_code}", "detail": e.response.text}
+        )
     except httpx.ConnectError as e:
         return json.dumps({"error": "Connection failed", "detail": str(e)})
 
@@ -107,7 +117,9 @@ def vhc_pricing() -> str:
         result = client.get_pricing()
         return json.dumps(result, indent=2, ensure_ascii=False)
     except httpx.HTTPStatusError as e:
-        return json.dumps({"error": f"HTTP {e.response.status_code}", "detail": e.response.text})
+        return json.dumps(
+            {"error": f"HTTP {e.response.status_code}", "detail": e.response.text}
+        )
     except httpx.ConnectError as e:
         return json.dumps({"error": "Connection failed", "detail": str(e)})
 
