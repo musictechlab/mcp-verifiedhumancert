@@ -1,5 +1,7 @@
 # mcp-verifiedhumancert
 
+[![Built by MusicTech Lab](https://musictechlab.io/oss/build-by-musictechlab.io.svg)](https://musictechlab.io)
+
 MCP server for querying the Verified Human Cert registry - verify human-made music certifications by ISRC, artist, track, or cert number.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
